@@ -9,7 +9,6 @@ import {
 import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { HeaderMiddle } from "@/components/Layout/Navbar";
 import Layout from "@/components/Layout/Layout";
 
 const useStyles = createStyles((theme) => ({
