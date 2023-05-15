@@ -1,0 +1,58 @@
+.blobsContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(#ffa945, #f35523);
+  pointer-events: none;
+  filter: blur(25px);
+}
+
+.blobVariantOne {
+  position: absolute;
+  width: 150px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(#ffa945, #f35523);
+  pointer-events: none;
+  filter: blur(25px);
+}
+
+.blobVariantTwo {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(#f35523, #ffa945);
+  pointer-events: none;
+  filter: blur(25px);
+}
+
+.header {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 80px;
+  position: sticky;
+  border: 0.5px solid;
+  border-radius: 25px;
+  border-color: orange;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.095);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Add as many .blob classes as you want to increase the number of scattered blobs */
