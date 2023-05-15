@@ -88,6 +88,7 @@ export const FundraiserHead = (props: any) => {
           >
             <Image
               src={image}
+              alt={`${name}'s Preview Image`}
               height={575}
               width={"100%"}
               radius="md"
