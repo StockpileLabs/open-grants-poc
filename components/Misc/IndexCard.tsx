@@ -1,5 +1,4 @@
-import { IconEye, IconMessageCircle } from '@tabler/icons-react';
-import { Card, Text, Group, Center, createStyles, getStylesRef, rem } from '@mantine/core';
+import { Card, Text, Group, createStyles, getStylesRef, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
     card: {

@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  Badge,
   Container,
   Paper,
   Group,
-  Space,
   Text,
   Anchor,
   ActionIcon,
@@ -12,12 +10,9 @@ import {
   Button,
 } from "@mantine/core";
 import {
-  FaTelegram,
   FaTwitter,
   FaRegWindowMaximize,
   FaGithub,
-  FaDiscord,
-  FaGift,
 } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { CardWithStats } from "../Round/PoolInfoMini";

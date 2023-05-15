@@ -22,7 +22,7 @@ import { useFirebase } from "@/context/FirebaseProvider";
 import { StepFragmentComponent } from "@mantine/core/lib/Stepper/Step/Step";
 
 interface StepProps {
-    category: string,
+    tag: string,
     pubkey: string,
     setOpened: Function,
     name: string,
@@ -31,7 +31,7 @@ interface StepProps {
 }
 
 const ContributeSteps = ({
-  category,
+  tag,
   pubkey,
   setOpened,
   name,
@@ -56,11 +56,11 @@ const ContributeSteps = ({
   const prevStep = () =>
     setActive((current) => (current > 0 ? current - 1 : current));
 
-  async function handleSubmit(amount: number, pubkey: string, category: string) {
+  async function handleSubmit(amount: number, pubkey: string, tag: string) {
     if (connected) {
       try {
         if (amount >= 0.01) {
-          var tx = await contributeFundraiser(pubkey, amount, category);
+          var tx = await contributeFundraiser(pubkey, amount, tag);
 
             const docRef = doc(db, `grants/${id}`);
             await updateDoc(docRef, {
@@ -86,7 +86,7 @@ const ContributeSteps = ({
     }
   }
 
-  async function handleException(amount: number, pubkey: string, category: string) {
+  async function handleException(amount: number, pubkey: string, tag: string) {
     if (connected) {
       console.log("Making exception...");
       var tx = await contributeExceptionFundraiser(pubkey, amount);
@@ -115,7 +115,7 @@ const ContributeSteps = ({
               handleSubmit(
                 Number(values.amount),
                 String(pubkey),
-                String(category)
+                String(tag)
               ),
               {
                 loading: "Loading...",
@@ -153,7 +153,7 @@ const ContributeSteps = ({
               handleException(
                 Number(values.amount),
                 String(pubkey),
-                String(category)
+                String(tag)
               ),
               {
                 loading: "Loading...",

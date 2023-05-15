@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Badge,
   Container,
-  Grid,
   Text,
   Title,
   Group,
@@ -11,25 +10,15 @@ import {
   Avatar,
   Anchor,
   Modal,
-  ActionIcon,
-  Stack,
 } from "@mantine/core";
 import {
   FaCoins,
-  FaDiscord,
-  FaGithub,
-  FaHeart,
   FaRegStar,
-  FaRegWindowMaximize,
-  FaTelegram,
-  FaTwitter,
 } from "react-icons/fa";
 import ProgressCard from "./ProgressCard";
-import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { getRandomAvatar } from "@/lib/getAvatar";
 import { useRouter } from "next/router";
 import ContributeSteps from "../Contribute/Steps";
-import { toast } from "react-hot-toast";
 import { useStockpile } from "@/context/StockpileProvider";
 import styles from "../../styles/Home.module.css";
 import moment from "moment";

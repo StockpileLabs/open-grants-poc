@@ -8,12 +8,8 @@ import {
 } from "@solana/wallet-adapter-react";
 import {
   PublicKey,
-  SystemProgram,
-  SYSVAR_RENT_PUBKEY,
   LAMPORTS_PER_SOL,
-  Transaction,
 } from "@solana/web3.js";
-import { TOKEN_PROGRAM_ID } from "@coral-xyz/anchor/dist/cjs/utils/token";
 import { IDL } from "@/lib/stockpile";
 import { useFirebase } from "./FirebaseProvider";
 

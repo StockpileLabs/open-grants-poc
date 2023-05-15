@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Container,
   Paper,
@@ -6,12 +6,9 @@ import {
   Badge,
   Text,
   Divider,
-  Space,
   Group,
   SimpleGrid,
   Center,
-  Skeleton,
-  Title,
   Anchor,
 } from "@mantine/core";
 import moment from "moment/moment";

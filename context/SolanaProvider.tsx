@@ -13,12 +13,6 @@ import {
     BackpackWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 import React, { useMemo } from "react";
-import {
-    createDefaultAddressSelector,
-    createDefaultAuthorizationResultCache,
-    createDefaultWalletNotFoundHandler,
-    SolanaMobileWalletAdapter,
-} from "@solana-mobile/wallet-adapter-mobile";
 
 export const DEFAULT_ENDPOINT = `https://rpc.helius.xyz/?api-key=${process.env.NEXT_PUBLIC_HELIUS_API_KEY}`;
 
@@ -28,19 +22,6 @@ require("@solana/wallet-adapter-react-ui/styles.css");
 export const SolanaProviders = ({ children }: any) => {
     const wallets = useMemo(
         () => [
-            /*
-            new SolanaMobileWalletAdapter({
-              addressSelector: createDefaultAddressSelector(),
-              appIdentity: {
-                name: "Stockpile",
-                uri: "https://stockpile.pro",
-                icon: "/logo.svg",
-              },
-              authorizationResultCache: createDefaultAuthorizationResultCache(),
-              cluster: DEFAULT_ENDPOINT,
-              onWalletNotFound: createDefaultWalletNotFoundHandler(),
-            }),
-            */
             new GlowWalletAdapter(),
             new SolflareWalletAdapter(),
             new TorusWalletAdapter(),
