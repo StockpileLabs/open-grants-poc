@@ -173,7 +173,11 @@ export function HeaderMiddle() {
               <Menu.Dropdown>
                 <Menu.Label>General</Menu.Label>
                 <Menu.Item icon={<IconSettings size={14} />}>Settings</Menu.Item>
-                <Menu.Item icon={<IconMoneybag size={14} />}>My Fundraisers</Menu.Item>
+                <Link href="/Dashboard" passHref>
+      <Menu.Item icon={<IconMoneybag size={14} />}>
+        <a>My Fundraisers</a>
+      </Menu.Item>
+    </Link>
 
                 <Menu.Divider />
 
