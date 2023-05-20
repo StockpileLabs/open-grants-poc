@@ -1,4 +1,4 @@
-import  React, { useState } from "react";
+import React, { useState } from "react";
 import {
     Card,
     Image,
@@ -52,14 +52,13 @@ interface GrantCardProps {
 
 
 export function AdCards(props: GrantCardProps) {
-   
-  const [isApproved, setIsApproved] = useState(false);
+    const [isApproved, setIsApproved] = useState(false);
 
-  const handleClick = () => {
-    setIsApproved(!isApproved);
-  };
+    const handleClick = () => {
+        setIsApproved(!isApproved);
+    };
 
-  const buttonName = isApproved ? 'Undo' : 'Approval';
+    const buttonName = isApproved ? 'Undo' : 'Approval';
     const { classes } = useStyles();
 
     let {
@@ -71,14 +70,11 @@ export function AdCards(props: GrantCardProps) {
         tag,
     } = props;
 
-   
-
     return (
         <>
             <Card
                 withBorder
                 component="a"
-                
                 radius="md"
                 p="md"
                 shadow="md"
@@ -104,19 +100,18 @@ export function AdCards(props: GrantCardProps) {
                         </Text>
                     </Group>
                 </Card.Section>
-                <Button 
-                
-                size="lg"
-                fullWidth
-                variant="gradient"
-                gradient={{ from: "#FFA945", to: "#F75426" }}
-                onClick={handleClick}
-                radius="md"   > 
-
-                  {buttonName}
-
-                </Button>
-                
+                <Card.Section p="md">
+                    <Button
+                        size="lg"
+                        fullWidth
+                        variant="gradient"
+                        gradient={{ from: "#FFA945", to: "#F75426" }}
+                        onClick={handleClick}
+                        radius="md"
+                    >
+                        {buttonName}
+                    </Button>
+                </Card.Section>
             </Card>
         </>
     );
