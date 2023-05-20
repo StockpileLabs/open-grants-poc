@@ -1,4 +1,4 @@
-import  React from "react";
+import React from "react";
 import {
     Card,
     Image,
@@ -8,10 +8,7 @@ import {
     createStyles,
     Progress,
     Button,
-    Box,
 } from "@mantine/core";
-import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-
 
 const useStyles = createStyles((theme) => ({
     card: {
@@ -53,7 +50,6 @@ export function Cards(props: GrantCardProps) {
     let {
         id,
         name,
-        description,
         imageLink,
         raised,
         goal,
@@ -61,16 +57,12 @@ export function Cards(props: GrantCardProps) {
         tag,
     } = props;
 
-    const handleClick = () => {
-        window.location.href = `/grant/${String(id)}`;
-      };
-
     return (
         <>
             <Card
                 withBorder
                 component="a"
-                
+                href={`/grant/${String(id)}`}
                 radius="md"
                 p="md"
                 shadow="md"
@@ -114,18 +106,6 @@ export function Cards(props: GrantCardProps) {
                     </Group>
                     <Progress value={(raised / goal) * 100} striped animate />
                 </Card.Section>
-               
-                <Button 
-                
-                size="lg"
-                fullWidth
-                variant="gradient"
-                gradient={{ from: "#FFA945", to: "#F75426" }}
-                onClick={handleClick}
-                radius="md"   > 
-                    View                            
-                </Button>
-                
             </Card>
         </>
     );

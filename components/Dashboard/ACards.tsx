@@ -6,12 +6,8 @@ import {
     Group,
     Badge,
     createStyles,
-    Progress,
     Button,
-    Box,
 } from "@mantine/core";
-import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-
 
 const useStyles = createStyles((theme) => ({
     card: {
@@ -39,32 +35,29 @@ const useStyles = createStyles((theme) => ({
 
 
 
-interface GrantCardProps {
+interface GrantApproveCardProps {
     id: string,
     name: string,
     description: string,
     imageLink: string,
-    raised: number,
-    goal: number,
     tagline: string,
     tag: string,
 }
 
 
-export function AdCards(props: GrantCardProps) {
+export function AdCards(props: GrantApproveCardProps) {
     const [isApproved, setIsApproved] = useState(false);
 
     const handleClick = () => {
         setIsApproved(!isApproved);
     };
 
-    const buttonName = isApproved ? 'Undo' : 'Approval';
+    const buttonName = isApproved ? 'Undo' : 'Approve';
     const { classes } = useStyles();
 
     let {
         id,
         name,
-        description,
         imageLink,
         tagline,
         tag,

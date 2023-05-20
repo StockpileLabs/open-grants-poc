@@ -1,7 +1,6 @@
 import React from "react";
-import { Container, SimpleGrid, Title, Space } from "@mantine/core";
+import { Container, SimpleGrid } from "@mantine/core";
 import AdCards from "./ACards";
-import { useFirebase } from "@/context/FirebaseProvider";
 import styles from "@/styles/Transitions.module.css";
 
 interface Grant {
